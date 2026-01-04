@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Footer from '@/components/Footer';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'CV Hero - Free CV Creator Online | No Signup Required',
+  title: 'CVHero - Free AI-Powered CV Builder | Create Your CV Online',
   description: 'Create a professional CV online for free without signup. Build, customize, and download your CV as PDF in minutes with our AI-powered CV builder.',
   keywords: [
     'free cv creator',
@@ -42,9 +43,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://freecvhero.vercel.app',
-    title: 'CV Hero - Free CV Creator Online | No Signup Required',
+    title: 'CVHero - Free AI-Powered CV Builder | Create Your CV Online',
     description: 'Create a professional CV online for free without signup. Build, customize, and download your CV as PDF in minutes with our AI-powered CV builder.',
-    siteName: 'CV Hero',
+    siteName: 'CVHero',
     images: [
       {
         url: 'https://freecvhero.vercel.app/og-image.png',
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CV Hero - Free CV Creator Online | No Signup Required',
+    title: 'CVHero - Free AI-Powered CV Builder | Create Your CV Online',
     description: 'Create a professional CV online for free without signup. Build, customize, and download your CV as PDF in minutes.',
     images: ['https://freecvhero.vercel.app/og-image.png'],
   },
@@ -77,13 +78,13 @@ export const metadata: Metadata = {
     icon: '🚀',
   },
   category: 'Career Tools',
-  applicationName: 'CV Hero - Free CV Creator Online | No Signup Required',
+  applicationName: 'CVHero - Free AI-Powered CV Builder | Create Your CV Online',
 };
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
-  name: 'CV Hero - Free CV Creator Online | No Signup Required',
+  name: 'CVHero - Free AI-Powered CV Builder',
   description: 'Create professional CVs online for free without signup. Build, customize, and download your CV as PDF in minutes.',
   url: 'https://freecvhero.vercel.app',
   applicationCategory: 'BusinessApplication',
@@ -123,7 +124,10 @@ export default function RootLayout({
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
