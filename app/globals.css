@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* Global text rendering */
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Print and PDF export styles */
+@media print {
+  body {
+    background: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  #cv-preview {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    page-break-after: avoid;
+  }
+  
+  #cv-preview > * {
+    page-break-inside: avoid;
+  }
+  
+  /* Ensure text and colors are preserved */
+  p, h1, h2, h3, h4, h5, h6, span, div {
+    color: #000 !important;
+    text-align: inherit !important;
+  }
+  
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}
+
+/* Optimize for canvas rendering */
+#cv-preview {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  color-adjust: exact !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+#cv-preview * {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  color-adjust: exact !important;
+  text-rendering: optimizeLegibility;
+}

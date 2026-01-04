@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gradient-to-br from-gray-50 to-gray-100;
+}
+
+/* PDF Export Styles */
+@media print {
+  #cv-preview {
+    box-shadow: none !important;
+    border: none !important;
+  }
+}

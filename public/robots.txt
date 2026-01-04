@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /.next
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Allow crawling of all pages
+Crawl-delay: 1
+
+Sitemap: https://cvhero.app/sitemap.xml
