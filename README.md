@@ -2,6 +2,8 @@
 
 A modern, feature-rich CV/Resume builder application built with Next.js and TypeScript. Create, customize, and export professional resumes with AI-powered enhancements and a seamless user experience.
 
+**🌐 Live Demo:** [freecvhero.vercel.app](https://freecvhero.vercel.app)
+
 ## Features
 
 - **Create & Edit CVs** - Intuitive forms for personal info, education, experience, projects, and skills
